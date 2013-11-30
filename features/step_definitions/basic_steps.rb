@@ -6,6 +6,17 @@ When(/^I go to the registration page$/) do
   visit 'registration.html'
 end
 
+When(/^I go to the score input page$/) do
+  visit 'score_input.html'
+end
+
+When(/^I go to the current standings page$/) do
+  visit 'current_standings.html'
+end
+
+Then(/^I should see all the scores$/) do
+  page.should have_content "Mckinley High School, John Doe, 10"
+end
 
 Then(/^I should see "(.*?)"$/) do |content|
   page.should have_content content
