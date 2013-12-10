@@ -1,0 +1,38 @@
+class ScoresController < ApplicationController
+	def index
+		@scores = Score.all
+	end
+
+	def new
+		#default: render new template
+	end
+
+	def show
+		id = params[:id]
+		@score = Score.find(id)
+	end
+
+	def create
+		@score = Score.create!(params[:newscore])
+		flash[:notice] = "#{@score.first_name}'s score was successfully entered!"
+		redirect_to scores_path 	
+	end
+
+	def edit
+		@score = Score.find params[:id]
+	end
+
+	def update
+		@score = Score.find params[:id]
+		@score.update_attributes!(params[:score])
+		flash[:notice] = "#{@score.first_name} #{@score.last_name}'s score was successfully updated!"
+		redirect_to scores_path
+	end
+
+	def destroy
+		@score = Score.find params[:id]
+		@score.destroy
+		flash[:notice] = "#{@score.first_name}'s score was deleted."
+		redirect_to scores_path
+	end
+end

@@ -1,0 +1,21 @@
+%h2 Input New Score
+
+= form_tag scores_path, :method => :post do
+	%p
+	= label :newscore, :first_name,'First Name'
+	= text_field :newscore, :first_name
+	%p
+
+	= label :newscore, :last_name,'Last Name'
+	= text_field :newscore, :last_name
+	%p
+	
+	= label :newscore, :school,'School'
+	= text_field :newscore, :school 
+	%p
+
+	= label :newscore, :score,'Score'
+	= text_field :newscore, :score
+	%p
+
+	=submit_tag 'Enter'

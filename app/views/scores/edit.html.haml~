@@ -1,0 +1,21 @@
+%h2 Edit Score
+
+= form_tag score_path(@score), :method => :put do
+	%p
+	= label :score, :first_name,'First Name'
+	= text_field :score, :first_name
+	%p
+
+	= label :score, :last_name,'Last Name'
+	= text_field :score, :last_name
+	%p
+	
+	= label :score, :school,'School'
+	= text_field :score, :school 
+	%p
+
+	= label :score, :score,'Score'
+	= text_field :score, :score
+	%p
+
+	=submit_tag 'Enter'

@@ -9,4 +9,5 @@ Feature: Score Input
     And I fill in "Student First Name" with "John"
     And I fill in "Student Last Name" with "Doe"
     And I fill in "Score" with "10"
+    And I press "Submit"
     Then I should see "Mckinley High School, John Doe, 10"

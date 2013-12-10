@@ -1,0 +1,12 @@
+<html>
+<head></head>
+<body><h1>Input New Score</h1>
+<form id='add' action="" method="get">
+    School:<input type="text" name="School"><br>
+    Student First Name:<input type="text" name="Student First Name"><br>
+    Student Last Name:<input type="text" name="Student Last Name"><br>
+    Score:<input type="text" name="Score"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

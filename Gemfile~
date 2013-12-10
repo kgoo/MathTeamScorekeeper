@@ -34,7 +34,6 @@ end
 
 ruby '1.9.3'
 
-gem 'haml'
 gem 'cucumber'
 gem 'rspec'
 gem 'mechanize'

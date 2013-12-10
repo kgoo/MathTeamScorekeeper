@@ -1,0 +1,19 @@
+-# This file is app/view/scores/index.html.haml
+%h2 Scores
+
+%table#movies
+  %thead
+    %tr
+      %th Last Name
+      %th First Name
+      %th School
+      %th Score
+  %tbody
+    - @scores.each do |s|
+      %tr
+        %td= s.last_name
+        %td= s.first_name
+        %td= s.school
+        %td= s.score
+        %td= link_to "More information", score_path(s)
+= link_to 'Input new score', new_score_path

@@ -9,4 +9,5 @@ Feature: School Registration
     And I fill in "Head Coach" with "John Doe"
     And I fill in "Coach Email" with "sample@gmail.com"
     And I fill in "Student Count" with "10"
+    And I press "Submit"
     Then I should see "Mckinley High School, John Doe, sample@gmail.com, 10"
